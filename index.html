@@ -5,21 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
 </head>
 <body>
+    <!-- Header - Section -->
     <div id="header">
         <div class="container">
             <nav>
-             <p>Tonyy</p>
-             <ul>
+             <p class="logo">Tonyy</p>
+             <ul class="list">
                 <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Protfolio</a></li>
                 <li><a href="">Contact</a></li>
              </ul>
             </nav>
+            <div class="ht">
+                <p>Frontend Developer</p>
+                <h1>Hi,I'm <span>Tony</span> from India</h1>
+            </div>
         </div>
     </div>
+    <!-- About - Section -->
+    <div id="about">
+        <div class="container1">
+            <div class="row">
+                <div class="col1">
+                    <img src="User.jpg" alt="">
+                </div>
+                <div class="col2">
+                    <h1 class="st">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate quibusdam minima magni ducimus eveniet itaque ipsum ad earum cumque voluptates debitis non esse deleniti eligendi, laboriosam nemo? Sed, aperiam?</p>
+                    <div class="tt">
+                        <p class="tl al" onclick="opentab('Skills')">Skills</p>
+                        <p class="tl" onclick="opentab('experience')">Experience</p>
+                        <p class="tl" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tc at" id="Skills">
+                        <ul>
+                            <li><span>C & C++</span><br>I have a solid foundation in C and C++, which has helped me understand core programming concepts like memory management, data structures, and object-oriented programming. These languages have sharpened my logical thinking and problem-solving abilities.</li>
+                            <li><span>PYTHON</span><br>I have a good understanding of Python and use it mainly for problem-solving, practicing logic, and working on small projects. It has helped me build a strong foundation in programming and understand key concepts clearly.</li>
+                            <li><SPAN>FRONTEND</SPAN><BR>I'm skilled in frontend web development, with hands-on experience in HTML, CSS, and JavaScript. I enjoy building responsive and visually engaging user interfaces, and I'm constantly learning modern frameworks and tools to improve user experience.</BR></li>  
+                            <LI><SPAn>GIT & GIT-HUB</SPAn><br>I use Git for version control to track changes in my code and collaborate on projects. I'm also familiar with GitHub, where I host my projects, manage repositories, and contribute to open-source code. These tools help me work efficiently and keep my code organized.</LI>
+                            <LI><span>AUTOMATION</span><br>I built an Auto-Pilot System using N8N that automates the process of uploading videos to YouTube. This workflow includes steps like fetching video files, generating titles and descriptions, and publishing them directly—without any manual intervention. This project reflects my interest in automation and my ability to integrate different tools to streamline digital tasks efficiently.</LI>
+                            <li><span>PROMPT ENGINEERING</span><BR>I've been learning Prompt Engineering to effectively interact with AI tools like ChatGPT and other LLMs. I know how to design clear and structured prompts to get accurate and useful outputs, and I use this skill to explore AI tools, content creation, and automation workflows.</BR></li>
+                        </ul>
+                    </div> 
+                    <div class="tc" id="experience">
+                        <ul>
+                            <li><span>2024-2025</span><br><p>Frontend:</p>Created an Dynamic Protfolio using HTML,CSS & JavaScript.</li>
+                            <li><p>Automation:</p>I built an Auto-Pilot System using N8N that automates the process of uploading videos to YouTube.</li>
+                        </ul>
+                    </div>
+                    <div class="tc" id="Education">
+                        <ul>
+                            <li><span>2024-current</span> <br> B.Tech From <p>MARWADI UNIVERSITY</p> RAJKOT.</li>
+                            <li><span>2022-2024</span><br>Intermediate From <p>NARAYANA JR COLLEGE</p> BVRM.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+var tl = document.getElementsByClassName("tl");
+var tc = document.getElementsByClassName("tc");
+
+function opentab(tabname){
+    for(tablink of tl){
+        tablink.classlist.remove("al");
+    }
+     for(tabcontent of tc){
+        tabcontent.classlist.remove("at");
+    }
+}
+</script>
 </body>
 </html>
