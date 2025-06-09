@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/811d035abc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header - Section -->
@@ -37,12 +38,12 @@
                 <div class="col2">
                     <h1 class="st">About Me</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate quibusdam minima magni ducimus eveniet itaque ipsum ad earum cumque voluptates debitis non esse deleniti eligendi, laboriosam nemo? Sed, aperiam?</p>
-                    <div class="tt">
-                        <p class="tl al" onclick="opentab('Skills')">Skills</p>
-                        <p class="tl" onclick="opentab('experience')">Experience</p>
-                        <p class="tl" onclick="opentab('Education')">Education</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
-                    <div class="tc at" id="Skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>C & C++</span><br>I have a solid foundation in C and C++, which has helped me understand core programming concepts like memory management, data structures, and object-oriented programming. These languages have sharpened my logical thinking and problem-solving abilities.</li>
                             <li><span>PYTHON</span><br>I have a good understanding of Python and use it mainly for problem-solving, practicing logic, and working on small projects. It has helped me build a strong foundation in programming and understand key concepts clearly.</li>
@@ -52,13 +53,13 @@
                             <li><span>PROMPT ENGINEERING</span><BR>I've been learning Prompt Engineering to effectively interact with AI tools like ChatGPT and other LLMs. I know how to design clear and structured prompts to get accurate and useful outputs, and I use this skill to explore AI tools, content creation, and automation workflows.</BR></li>
                         </ul>
                     </div> 
-                    <div class="tc" id="experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2024-2025</span><br><p>Frontend:</p>Created an Dynamic Protfolio using HTML,CSS & JavaScript.</li>
                             <li><p>Automation:</p>I built an Auto-Pilot System using N8N that automates the process of uploading videos to YouTube.</li>
                         </ul>
                     </div>
-                    <div class="tc" id="Education">
+                    <div class="tab-contents" id="Education">
                         <ul>
                             <li><span>2024-current</span> <br> B.Tech From <p>MARWADI UNIVERSITY</p> RAJKOT.</li>
                             <li><span>2022-2024</span><br>Intermediate From <p>NARAYANA JR COLLEGE</p> BVRM.</li>
@@ -67,20 +68,68 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-<script>
-var tl = document.getElementsByClassName("tl");
-var tc = document.getElementsByClassName("tc");
+    </div> 
 
-function opentab(tabname){
-    for(tablink of tl){
-        tablink.classlist.remove("al");
-    }
-     for(tabcontent of tc){
-        tabcontent.classlist.remove("at");
-    }
-}
-</script>
+    <!-- ---------- Services ------------ -->
+
+    <div id="sevices">
+        <div class="container">
+            <h1 class="st">My Services</h1>
+            <div class="sl">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend</h2>
+                    <p>I design and build responsive, user-friendly websites using HTML, CSS, and JavaScript. My goal is to create clean and modern interfaces that look great on all devices. Whether it's a personal portfolio, landing page, or a small business site, I focus on delivering smooth user experiences and visually appealing layouts. I can also help with UI improvements, animations, and basic interactivity to bring your ideas to life.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h2>Automation</h2>
+                    <p>I provide custom automation solutions to simplify repetitive tasks and save time. Using tools like N8N, I build visual workflows that can automate tasks such as content publishing, data syncing, and YouTube video uploads — all with little to no manual effort. Whether you're a content creator, student, or small business, I can help design an Auto-Pilot system tailored to your workflow, increasing efficiency and reducing human error.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Prompt-Engineering</h2>
+                    <p>I help individuals and creators get the most out of AI tools like ChatGPT, Gemini, and Claude by crafting well-structured and powerful prompts. Whether you're generating content, automating tasks, writing code, or building AI workflows, I can design custom prompts that give better, faster, and more accurate results. My prompt engineering skill makes working with AI more efficient and productive for real-world use cases.</p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------- protfolio ------------ -->
+
+    <div id="protfolio">
+        <div class="container">
+            <h1 class="st">My Work</h1>
+            <div class="wl">
+                <div class="w">
+                    <img src="work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Protfolio</h3>
+                        <p>Made an Dynamic Protfolio using HTML,CSS & JavaScript.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="w">
+                    <img src="work-2.png" alt="">
+                        <div class="layer">
+                        <h3>YT-Video Dowloder</h3>
+                        <p>Made an website which can downlads all the videos that contains in a yt channel.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="w">
+                    <img src="work-3.png" alt="">
+                        <div class="layer">
+                        <h3>Auto-Pilot</h3>
+                        <p>Made an Automation which can upload videos on YT </p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

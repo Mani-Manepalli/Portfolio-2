@@ -98,18 +98,18 @@ h1 span{
     color: #fff;
 
 }
-.tt{
+.tab-titles{
     display: flex;
     margin: 20px 0 40px;
 }
-.tl{
+.tab-links{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tl::after{
+.tab-links::after{
     content: '';
     width: 0%;
     height: 3px;
@@ -120,31 +120,92 @@ h1 span{
     transition: 0.5s;
 
 }
-.tl.al::after{
+.tab-links.active-link::after{
     width: 50%;
 }
-.tc ul li{
+.tab-contents ul li{
     list-style: none;
     margin: 10px 0;
     font-size: 16px;
 
 }
-.tc ul li span{
+.tab-contents ul li span{
     color: #b54769;
     font-size: 18px;
 }
-.tc ul li p{
+.tab-contents ul li p{
     display: inline;
     font-size: 18px;
-    color: #598d16;
+    margin-right: 2px;
 }
-.tc{
+.tab-contents{
     display: none;
 }
-.tc.at {
+.tab-contents.active-tab {
     display: block;
 }
 
+/* ------------- Services -------------- */
+#sevices{
+    padding: 30px 0;
+}
+.sl{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.sl div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s ;
+}
+.sl div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.sl div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.sl div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.sl div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ------------- Protfolio ----------------- */
+
+#protfolio{
+    padding: 50px 0;
+}
+.wl{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;   
+}
+.w{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.w img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
 
 
 
