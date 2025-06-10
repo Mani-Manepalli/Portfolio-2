@@ -39,7 +39,7 @@
                 </div>
                 <div class="col2">
                     <h1 class="st">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate quibusdam minima magni ducimus eveniet itaque ipsum ad earum cumque voluptates debitis non esse deleniti eligendi, laboriosam nemo? Sed, aperiam?</p>
+                    <p>A motivated B.Tech CSE student with skills in C, C++, Python, frontend development, and automation. Eager to learn and apply technical skills in real-world projects and internship opportunities.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -151,10 +151,10 @@
                     <a href="CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="cr">
-                    <form action="">
+                    <form action="" name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Messsage"></textarea>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Messsage"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -177,6 +177,20 @@
         }
 
     </script>
+
+<!-- ------------ Contact form ------------ -->
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzXbUKpqIh0_tBSDl88gAV-R9Xqv8pyHvX8xU8t0LvSg_zxII0wSTB1WcGLiJjSe4sm/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 </body>
 </html>
